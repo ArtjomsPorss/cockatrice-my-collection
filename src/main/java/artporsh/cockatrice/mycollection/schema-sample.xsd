@@ -1,0 +1,78 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cockatrice_carddatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sets">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="set" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="longname"/>
+                    <xs:element type="xs:string" name="settype"/>
+                    <xs:element type="xs:date" name="releasedate"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cards">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="card" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="text"/>
+                    <xs:element name="prop">
+                      <xs:complexType>
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                          <xs:element type="xs:string" name="manacost"/>
+                          <xs:element type="xs:string" name="format-commander"/>
+                          <xs:element type="xs:string" name="format-duel"/>
+                          <xs:element type="xs:string" name="coloridentity"/>
+                          <xs:element type="xs:string" name="format-oldschool"/>
+                          <xs:element type="xs:string" name="side"/>
+                          <xs:element type="xs:string" name="pt"/>
+                          <xs:element type="xs:string" name="colors"/>
+                          <xs:element type="xs:string" name="layout"/>
+                          <xs:element type="xs:string" name="type"/>
+                          <xs:element type="xs:string" name="format-legacy"/>
+                          <xs:element type="xs:byte" name="cmc"/>
+                          <xs:element type="xs:string" name="maintype"/>
+                          <xs:element type="xs:string" name="format-vintage"/>
+                          <xs:element type="xs:string" name="format-pauper"/>
+                          <xs:element type="xs:string" name="format-frontier"/>
+                          <xs:element type="xs:string" name="format-modern"/>
+                          <xs:element type="xs:string" name="format-penny"/>
+                          <xs:element type="xs:string" name="format-future"/>
+                          <xs:element type="xs:string" name="format-standard"/>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="set" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:int" name="muid" use="optional"/>
+                            <xs:attribute type="xs:string" name="rarity" use="optional"/>
+                            <xs:attribute type="xs:string" name="uuid" use="optional"/>
+                            <xs:attribute type="xs:short" name="num" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="tablerow"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

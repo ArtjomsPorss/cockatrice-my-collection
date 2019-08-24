@@ -1,25 +1,5 @@
-Swamp
-Forest
-Plains
-Island
-Mountain
-Soothsaying
-Wild Ricochet
+Acidic Slime
+Butcher of Malakir
+Call of the Wild
+Danitha Capashen, Paragon
 Edgewalker
-Crystal Shard
-Nissa Who Shakes The World
-Birds of Paradise
-God-Eternal Rhonas
-God-Eternal Bontu
-Sram, Senior Edificer
-Dramatic Reversal
-Universal Automaton
-Changeling Outcast
-Graveshifter
-Earthquake
-Fumiko the Lowblood
-Windfall
-Simic Growth Chamber
-Ulamog's Crusher
-Treasure Cruise
-Immolation Shaman
